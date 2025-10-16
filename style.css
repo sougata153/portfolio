@@ -1,0 +1,256 @@
+:root {
+    --bg: #0f1724;
+    --card: #0b1220;
+    --muted: #9aa4b2;
+    --accent: #60a5fa;
+    --glass: rgba(255, 255, 255, 0.04);
+}
+
+* {
+    box-sizing: border-box
+}
+
+html,
+body {
+    height: 100%
+}
+
+body {
+    margin: 0;
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, 'Helvetica Neue', Arial;
+    background: linear-gradient(180deg, #071029 0%, #071b2a 60%);
+    color: #e6eef8;
+    -webkit-font-smoothing: antialiased
+}
+
+.container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 24px
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px
+}
+
+.logo {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, var(--accent), #7dd3fc);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #052036;
+    font-weight: 700
+}
+
+.logo img {
+    width: 55px;
+    height: 55px;
+}
+
+nav {
+    display: flex;
+    gap: 14px;
+    align-items: center
+}
+
+nav a {
+    color: var(--muted);
+    text-decoration: none;
+    font-weight: 600
+}
+
+nav a:hover {
+    color: var(--accent)
+}
+
+main {
+    margin-top: 28px
+}
+
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 360px;
+    gap: 28px;
+    align-items: center
+}
+
+.card {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
+    border-radius: 14px;
+    padding: 22px;
+    box-shadow: 0 6px 20px rgba(2, 6, 23, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.03)
+}
+
+.intro h1 {
+    margin: 0;
+    font-size: 36px;
+    line-height: 1.02
+}
+
+.intro p {
+    color: var(--muted);
+    margin: 10px 0 18px
+}
+
+.cta {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap
+}
+
+.btn {
+    padding: 10px 16px;
+    border-radius: 10px;
+    border: 0;
+    cursor: pointer;
+    font-weight: 700;
+    text-decoration: none;
+    text-align: center
+}
+
+.btn-primary {
+    background: linear-gradient(90deg, var(--accent), #7dd3fc);
+    color: #032033
+}
+
+.btn-ghost {
+    background: transparent;
+    color: var(--accent);
+    border: 1px solid rgba(96, 165, 250, 0.12)
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    gap: 12px
+}
+
+.profile figure {
+    margin: 0
+}
+
+.avatar {
+    width: 100%;
+    height: 380px;
+    border-radius: 10px;
+    object-fit: cover;
+    background: linear-gradient(180deg, #0b1220, #08101a);
+    display: block
+}
+
+.meta {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px
+}
+
+.muted {
+    color: var(--muted);
+    font-size: 14px
+}
+
+section {
+    margin-top: 28px
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 16px;
+}
+
+.project {
+    padding: 14px;
+    border-radius: 12px;
+    background: var(--glass);
+    border: 1px solid rgba(255, 255, 255, 0.02)
+}
+
+.project h4 {
+    margin: 0 0 8px
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px
+}
+
+.skill {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 8px 10px;
+    border-radius: 999px;
+    font-weight: 600
+}
+
+footer {
+    margin: 36px 0 12px;
+    color: var(--muted);
+    text-align: center
+}
+
+@media (max-width:980px) {
+    .hero {
+        grid-template-columns: 1fr
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr)
+    }
+
+    .projects-grid .project {
+        min-height: 120px
+    }
+}
+
+@media (max-width:620px) {
+    .projects-grid {
+        grid-template-columns: 1fr
+    }
+
+    .header-right {
+        display: none
+    }
+
+    .container {
+        margin: 12px;
+        padding: 16px
+    }
+}
+
+.tag {
+    font-size: 12px;
+    padding: 6px 8px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.02);
+    color: var(--muted)
+}
+
+a.link {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.log img {
+    width: 10%;
+    height: 10%;
+
+}
+
+.con {
+    display:inline-block;
+}
